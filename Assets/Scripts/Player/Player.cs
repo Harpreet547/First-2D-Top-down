@@ -23,6 +23,15 @@ public class Player : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        body.MovePosition(body.position + (Time.fixedDeltaTime * runSpeed * movement));
+        if(!IsPlaying(animator, "Sword_attack")) {
+            body.MovePosition(body.position + (Time.fixedDeltaTime * runSpeed * movement));
+        }
+    }
+
+    bool IsPlaying(Animator anim, string stateName) {
+        Debug.Log(anim.GetCurrentAnimatorStateInfo(0).IsName(stateName));
+
+        return anim.GetCurrentAnimatorStateInfo(0).IsName(stateName) &&
+            anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
     }
 }
