@@ -290,9 +290,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -489,7 +489,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1270321555
 MonoBehaviour:
@@ -503,7 +503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53fe99e6847461048abecb550dfebffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
+  runSpeed: 100
+  startDashTime: 0.05
+  dashSpeed: 25
 --- !u!95 &1270321556
 Animator:
   serializedVersion: 3
@@ -517,7 +519,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 4ea6adc8e65722d41af887f2c17e31f7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
