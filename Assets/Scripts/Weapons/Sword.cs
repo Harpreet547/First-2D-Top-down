@@ -7,6 +7,7 @@ public class Sword : MonoBehaviour {
     public Transform attackPoint;
     public LayerMask enemyLayers;
     public float attackRange = 0.5f;
+    public float attackDamage = 30f;
     Animator animator;
     Rigidbody2D rb;
 
@@ -29,6 +30,7 @@ public class Sword : MonoBehaviour {
         foreach(Collider2D hitEnemy in hitEnemies) {
             Debug.Log("We hit enemy: " + hitEnemy.name);
             // TODO: Damage enemy.
+            hitEnemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         };
     }
 
