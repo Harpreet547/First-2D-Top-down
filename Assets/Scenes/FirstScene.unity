@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 309459788}
   - component: {fileID: 309459790}
   - component: {fileID: 309459791}
+  - component: {fileID: 309459792}
+  - component: {fileID: 309459793}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -217,6 +219,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.33}
   m_EdgeRadius: 0
+--- !u!114 &309459792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309459787}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b566e5a3b4db9488cf5bb09fdcbf7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  target: {fileID: 1270321553}
+  minimumDistance: 2
+  maxDistanceToStartFollow: 5
+--- !u!114 &309459793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309459787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c977dcc9124b27743bb6732b9bb1b458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  target: {fileID: 1270321553}
+  minimumDistance: 5
+  projectile: {fileID: 3423672179584756357, guid: 724674d4e6346af45a575ddabf81bfe1, type: 3}
+  timeBtwShoots: 3
+  shootForce: 2
 --- !u!1 &379230709
 GameObject:
   m_ObjectHideFlags: 0
