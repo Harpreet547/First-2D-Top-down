@@ -9,6 +9,7 @@ public class FollowAI : MonoBehaviour {
     public float maxDistanceToStartFollow = 10.0f;
 
     private void Update() {
+        if(target == null) return;
         if(
             Vector2.Distance(transform.position, target.position) > minimumDistance &&
             Vector2.Distance(transform.position, target.position) < maxDistanceToStartFollow
