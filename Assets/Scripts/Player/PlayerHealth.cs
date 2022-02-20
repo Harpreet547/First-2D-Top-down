@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
-{
+public class PlayerHealth : MonoBehaviour {
     public float totalHealth = 100f;
     float currentHealth;
 

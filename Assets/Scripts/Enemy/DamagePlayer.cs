@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageEnemy : MonoBehaviour {
-
-    public LayerMask enemyLayers;
+public class DamagePlayer : MonoBehaviour {
+    public LayerMask playerLayers;
     public bool shouldDestroySelf = true;
 
     public float damage = 20f;
@@ -21,8 +20,8 @@ public class DamageEnemy : MonoBehaviour {
 
     void OnCollision(Collider2D other) {
         if(shouldDestroySelf) Destroy(gameObject);
-        if (Utils.IsLayerInMask(other.gameObject.layer, enemyLayers)) {
-            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+        if (Utils.IsLayerInMask(other.gameObject.layer, playerLayers)) {
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }
 }
