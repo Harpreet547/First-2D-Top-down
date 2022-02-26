@@ -496,6 +496,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
+      propertyPath: shootForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
       propertyPath: shouldRetreat
       value: 0
       objectReference: {fileID: 0}
@@ -567,6 +571,10 @@ PrefabInstance:
     - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
+      propertyPath: shootForce
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
       propertyPath: shouldRetreat
@@ -833,6 +841,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
+      propertyPath: shootForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
       propertyPath: shouldRetreat
       value: 0
       objectReference: {fileID: 0}
@@ -906,10 +918,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
+      propertyPath: shootForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
       propertyPath: shouldRetreat
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
+      propertyPath: minimumDistanceToShoot
+      value: 9.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4698823100039157722, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
 --- !u!1 &774850105
 GameObject:
@@ -1082,6 +1103,10 @@ PrefabInstance:
     - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
+      propertyPath: shootForce
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2948774181126469085, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
       propertyPath: shouldRetreat
@@ -1312,6 +1337,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6668130035654080163, guid: 8482dce26ef78364e9e85bdd74905d1b, type: 3}
   m_PrefabInstance: {fileID: 2086102291}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1496269408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8258588961236194990, guid: 169d64d97fc26f74096ecd3defbee2d8, type: 3}
+  m_PrefabInstance: {fileID: 518390340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1496269410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496269408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f883c79dbbb64d4ca6c5c3ada5c95f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 20
+--- !u!114 &1496269413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496269408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297946b7a87b56442a45cef842249e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  shouldDestroySelf: 0
+  damage: 20
 --- !u!1 &1708289877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1807,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4519670337813041090, guid: 8482dce26ef78364e9e85bdd74905d1b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6668130035654080162, guid: 8482dce26ef78364e9e85bdd74905d1b, type: 3}
       propertyPath: m_Name
       value: Player
