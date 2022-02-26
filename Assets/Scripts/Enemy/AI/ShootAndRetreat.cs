@@ -25,6 +25,8 @@ public class ShootAndRetreat : MonoBehaviour {
         if(Vector2.Distance(transform.position, target.position) < minimumDistance && shouldRetreat) {
             // Warning: Using transform.position will cause enemy to move through colliders. Use velocity if you don't want this.
             transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
+        } else if(Vector2.Distance(transform.position, target.position) < minimumDistance && !shouldRetreat) {
+            GetComponent<EnemyMeleeAttack>().Attack();
         }
     }
 
@@ -35,7 +37,7 @@ public class ShootAndRetreat : MonoBehaviour {
         }
 
         // TODO: Refactor below logic
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Time.deltaTime * Mathf.Rad2Deg + 90;
+        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg + 90;
         rigidBody.rotation = angle;
     }
 

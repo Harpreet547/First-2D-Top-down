@@ -15,6 +15,8 @@ public class FollowAI : MonoBehaviour {
             Vector2.Distance(transform.position, target.position) < maxDistanceToStartFollow
         ) {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        } else {
+            GetComponent<EnemyMeleeAttack>().Attack();
         }
     }
 
