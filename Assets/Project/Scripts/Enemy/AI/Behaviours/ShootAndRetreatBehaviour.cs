@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootAndRetreat : MonoBehaviour {
+public class ShootAndRetreatBehaviour : MonoBehaviour {
     public float speed = 3.0f;
     public Transform target;
     public float minimumDistance = 2.0f;
@@ -20,7 +20,7 @@ public class ShootAndRetreat : MonoBehaviour {
         nextShotTime = Time.time + timeBtwShoots;
     }
 
-    private void Update() {
+    public void BehaviourOn_Update() {
 
         if(Vector2.Distance(transform.position, target.position) < minimumDistance && shouldRetreat) {
             // Warning: Using transform.position will cause enemy to move through colliders. Use velocity if you don't want this.
@@ -30,7 +30,7 @@ public class ShootAndRetreat : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate() {
+    public void BehaviourOn_FixedUpdate() {
         if(Time.time > nextShotTime && Vector2.Distance(transform.position, target.position) < minimumDistanceToShoot) {
             Shoot();
             nextShotTime = Time.time + timeBtwShoots;
@@ -42,7 +42,6 @@ public class ShootAndRetreat : MonoBehaviour {
     }
 
     private void Shoot() {
-        Debug.Log("Shoot");
         GameObject bullet = Instantiate(projectile, shootingPoint.position, Quaternion.identity);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce((target.position - shootingPoint.position).normalized * shootForce, ForceMode2D.Impulse);
