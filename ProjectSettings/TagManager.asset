@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Enemy
   - Player Weapon
-  - 
+  - Boss
   - 
   - 
   - 
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: Player Weapons
     uniqueID: 3585063867
+    locked: 0
+  - name: Boss
+    uniqueID: 2637234289
     locked: 0
