@@ -31,4 +31,8 @@ public class EnemyHealth : MonoBehaviour
         this.enabled = false;
         gameObject.SetActive(false);
     }
+
+    public float GetCurrentHealth() {
+        return currentHealth;
+    }
 }
